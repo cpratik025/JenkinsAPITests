@@ -11,7 +11,7 @@ def jenkins_conn():
     print("connecting to Jenkins...")
     sleep(2)
 
-    jconn = jenkinsapi.Jenkins('http://192.168.137.1:8080', username='pratik025', password=token)
+    jconn = Jenkins.Jenkins('http://192.168.137.1:8080', username='pratik025', password=token)
     version = jconn.get_version()
     print('Hello from Jenkins {}'.format(version))
 
