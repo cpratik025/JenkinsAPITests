@@ -1,6 +1,6 @@
 # !/bin/python3
 
-from jenkinsapi import jenkins
+import jenkins
 from time import sleep
 
 
