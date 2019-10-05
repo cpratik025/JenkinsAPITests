@@ -14,3 +14,5 @@ def jenkins_conn():
     jconn = jenkins.Jenkins('localhost:8080', username='pratik025', password=token)
     version = jconn.get_version()
     print('Hello from Jenkins {}'.format(version))
+
+jenkins_conn()
