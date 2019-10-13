@@ -2,7 +2,7 @@ server.create_node('slave1')
 nodes = get_nodes()
 print (nodes)
 node_config = server.get_node_info('slave1')
-print node_config
+print (node_config)
 server.disable_node('slave1')
 server.enable_node('slave1')
 
