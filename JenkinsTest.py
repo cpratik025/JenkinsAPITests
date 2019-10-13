@@ -18,10 +18,10 @@ def jenkins_job_status(job_name):
                         else:
                                 if data['result'] == "SUCCESS":
 
-                                        print "Job is success"
+                                        print("Job is success")
                                         return True
                                 else:
-                                        print "Job status failed"
+                                        print("Job status failed")
                                         return False
 
                 
@@ -36,8 +36,8 @@ if __name__ == "__main__":
 
         if jenkins_job_status(job_name):
 
-                print "Put your autmation here for 'job is success' condition"
+                print("Put your autmation here for 'job is success' condition")
 
         else:
-                print "Put your autmation here for 'job is failed' condition"                
+                print("Put your autmation here for 'job is failed' condition"  )              
 	
