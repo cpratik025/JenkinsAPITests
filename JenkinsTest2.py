@@ -24,23 +24,23 @@ def jenkinsconn():
 
 
 
-build_zipped = zip(job_name_list, build_number_list)
-for i, j in build_zipped:
-    success = 0
-    failure = 0
-    unstable = 0
-    aborted = 0
-    for k in range(j):
-        build_info = server.get_build_info(i, k + 1)
-        build_info_list.append(build_info)
-        status = build_info['result']
-        if status == "SUCCESS":
-            success += 1
-        elif status == "FAILURE":
-            failure += 1
-        elif status == "UNSTABLE":
-            unstable += 1
-        else:
-            aborted += 1
-        statuscount = [success, failure, unstable, aborted]
-        status_list_dict[i] = statuscount
+    build_zipped = zip(job_name_list, build_number_list)
+    for i, j in build_zipped:
+        success = 0
+        failure = 0
+        unstable = 0
+        aborted = 0
+        for k in range(j):
+            build_info = server.get_build_info(i, k + 1)
+            build_info_list.append(build_info)
+            status = build_info['result']
+            if status == "SUCCESS":
+                success += 1
+            elif status == "FAILURE":
+                failure += 1
+            elif status == "UNSTABLE":
+                unstable += 1
+            else:
+                aborted += 1
+            statuscount = [success, failure, unstable, aborted]
+            status_list_dict[i] = statuscount
