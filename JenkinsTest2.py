@@ -1,6 +1,5 @@
 import jenkinsapi
 
-import jenkins
 def jenkinsconn():
     server = jenkins.Jenkins('http://localhost:8080', username='pratik025', password='118c8df204629792403c6898be4c42ef0b')
     jobs = server.get_jobs()
