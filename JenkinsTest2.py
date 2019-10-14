@@ -44,3 +44,4 @@ def jenkinsconn():
                 aborted += 1
             statuscount = [success, failure, unstable, aborted]
             status_list_dict[i] = statuscount
+jenkinsconn()
